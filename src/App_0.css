@@ -1,0 +1,576 @@
+/* Global styles */
+* {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Header Section */
+.header {
+  position: relative;
+  color: white;
+  background-image: url('./assets/images/Plan.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button {
+  position: absolute;
+  top: 50px;
+  right: 150px;
+}
+
+.contact-btn {
+  background-color: rgba(226, 45, 84, 1);
+  color: white;
+  padding: 13px 40px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-image: url('./assets/images/logo_linkt.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.site-title {
+  font-size: clamp(8rem, 10vw, 14rem);
+  font-weight: 900;
+}
+
+.description {
+  margin-top: 0px;
+  max-width: 600px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+}
+
+.additional-text {
+  margin-top: 40px;
+  max-width: 1000px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+}
+
+/* Top Bars */
+.navbar {
+  width: 100%;
+  height: 35px;
+  background-color: rgba(223, 22, 65, 0.9);
+}
+
+/* Mission Section */
+.mission-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.mission-title {
+  font-size: 35px;
+  font-weight: 700;
+  color: rgba(42, 88, 119, 1);
+  margin-bottom: 80px;
+}
+
+.mission-grid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.mission-item {
+  text-align: left;
+}
+
+.mission-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mission-number {
+  font-size: 70px;
+  font-weight: 700;
+  color: rgba(225, 225, 225, 1);
+}
+
+.mission-heading {
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+  max-width: 300px;
+}
+
+.mission-description {
+  color: rgba(0, 0, 0, 1);
+  max-width: 470px;
+  text-align: left;
+  font-weight: 500;
+}
+
+
+/* Sports Section */
+.top-bar1 {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 191, 99, 0.9);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.top-bar2 {
+  width: 250px;
+  height: 60px;
+  background-color: rgba(0, 191, 99, 0.9);
+  top: 60px;
+  margin-left: 60px;
+  z-index: 1000;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+}
+
+.sports-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.sports-container {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.sports-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.sport-item {
+  text-align: center;
+}
+
+.sport-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.sport-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.sport-name {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Centrer le texte dans .additional-text */
+.additional-text {
+  margin-top: 40px;
+  max-width: 1000px;
+  color: #000;
+  font-weight: 500;
+  text-align: center; /* Cela devrait centrer le texte */
+  margin-left: auto; /* Centrage horizontal */
+  margin-right: auto; /* Centrage horizontal */
+}
+
+/* Centrer les icônes sociales (social-icons) */
+.social-icons {
+  display: flex;
+  justify-content: center;  /* Centrer horizontalement */
+  gap: 16px;  /* Espacement entre les icônes */
+  margin-top: 20px;  /* Vous pouvez ajuster la marge selon le besoin */
+}
+
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sports-title {
+    font-size: 28px;
+  }
+
+  .sports-icons {
+    gap: 20px;
+  }
+
+  .sport-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .sport-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sport-name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sports-title {
+    font-size: 24px;
+  }
+
+  .sports-icons {
+    gap: 10px;
+  }
+
+  .sport-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .sport-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .sport-name {
+    font-size: 18px;
+  }
+}
+
+/* Centrer le conteneur principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  text-align: center;
+}
+
+/* Style de la section avec le texte */
+.App-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 80px;
+  margin-top: 30px;
+}
+
+/* Style du rectangle rouge avec bordure */
+.text-container {
+  background-color: rgba(229, 69, 103, 1);
+  color: white;
+  padding: 100px 80px;
+  max-width: 60%;
+  border-radius: 30px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 35px;
+  font-weight: 700;
+  text-align: start;
+}
+
+/* Mise en place des médias queries pour rendre le tout responsive */
+@media (max-width: 1024px) {
+  .text-container {
+    max-width: 80%; /* Augmente la largeur sur les écrans plus petits */
+    padding: 80px 60px; /* Ajuste les espacements */
+    font-size: 28px; /* Diminue la taille du texte */
+  }
+}
+
+@media (max-width: 768px) {
+  .text-container {
+    max-width: 90%; /* Largeur encore plus petite pour les tablettes */
+    padding: 60px 40px;
+    font-size: 24px; /* Réduit encore plus la taille du texte */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container {
+    max-width: 95%; /* Largeur presque pleine sur mobile */
+    padding: 40px 20px; /* Moins de padding */
+    font-size: 20px; /* Réduit la taille du texte pour s'adapter à un petit écran */
+  }
+}
+
+/* Cercles */
+.cercle2 {
+  width: 250px; /* Taille du cercle */
+  height: 250px;
+  border-radius: 50%; /* Crée un cercle */
+  background-color: rgba(0, 0, 0, 0.1); /* Optionnel, pour ajouter une couleur de fond */
+  margin-bottom: 20px; /* Ajout d'un espace en bas du cercle */
+  margin-left: auto; /* Centrer horizontalement */
+  margin-right: auto; /* Centrer horizontalement */
+}
+
+/* Titre du sport sous chaque cercle */
+.sport-title2 {
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 5px; /* Espacement entre le nom du sport et le titre */
+}
+
+/* Description sous chaque cercle */
+.sport-description2 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0; /* Espacement entre le titre et la description */
+  color: rgba(0, 0, 0, 0.7); /* Couleur plus douce pour la description */
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto; /* Centrer la description */
+}
+
+/* Conteneur des cercles */
+.sports-icons2 {
+  display: flex;
+  justify-content: center; /* Espacement uniforme entre les cercles */
+  gap: 150px; /* Espacement entre les cercles */
+  margin-top: 40px; /* Espacement supplémentaire entre les cercles et le contenu supérieur */
+  flex-wrap: wrap; /* Permet aux cercles de se réarranger sur plusieurs lignes si nécessaire */
+}
+
+.App-sport{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+/* Assurez-vous que chaque cercle et son texte sont centrés */
+.sport2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Empêcher les marges automatiques */
+  padding: 0; /* S'assurer que le padding est nul */
+  height: 100%; /* S'assurer que la hauteur est complète */
+}
+
+/* Media Queries pour rendre le design responsive */
+@media (max-width: 1024px) {
+  /* Ajustements pour les écrans de tablette */
+  .sports-icons2 {
+    gap: 100px; /* Réduire l'espace entre les cercles */
+  }
+
+  .text-container {
+    padding: 30px 60px; /* Réduire les marges de la boîte de texte */
+    font-size: 40px; /* Réduire la taille de la police */
+  }
+
+  .cercle2 {
+    width: 200px; /* Réduire la taille des cercles */
+    height: 200px;
+  }
+
+  .sport-title2 {
+    font-size: 22px; /* Réduire la taille du titre */
+  }
+
+  .sport-description2 {
+    font-size: 16px; /* Réduire la taille de la description */
+    max-width: 220px; /* Réduire la largeur max de la description */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustements pour les écrans de téléphone mobile */
+  .sports-icons2 {
+    flex-direction: column; /* Aligner les cercles verticalement */
+    gap: 50px; /* Réduire l'espacement */
+    margin-top: 20px;
+  }
+
+  .text-container {
+    padding: 20px 40px; /* Réduire les marges */
+    font-size: 30px; /* Réduire la taille de la police */
+    max-width: 90%; /* Utiliser plus de largeur */
+  }
+
+  .cercle2 {
+    width: 180px; /* Réduire encore plus la taille des cercles */
+    height: 180px;
+  }
+
+  .sport-title2 {
+    font-size: 20px; /* Réduire la taille du titre */
+  }
+
+  .sport-description2 {
+    font-size: 14px; /* Réduire la taille de la description */
+    max-width: 200px; /* Réduire la largeur max de la description */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustements pour les petits écrans (smartphones) */
+  .sports-icons2 {
+    gap: 30px; /* Réduire davantage l'espacement */
+  }
+
+  .text-container {
+    padding: 15px 30px; /* Réduire les marges */
+    font-size: 25px; /* Réduire la taille de la police */
+  }
+
+  .cercle2 {
+    width: 150px; /* Réduire la taille des cercles sur les petits écrans */
+    height: 150px;
+  }
+
+  .sport-title2 {
+    font-size: 18px; /* Réduire la taille du titre */
+  }
+
+  .sport-description2 {
+    font-size: 12px; /* Réduire la taille de la description */
+    max-width: 180px; /* Réduire la largeur max de la description */
+  }
+}
+
+.values-container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin-top: 100px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.values-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+
+}
+
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.value-item {
+  flex: 1 1 calc(20% - 40px);
+  max-width: calc(20% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.value-image {
+  width: 100%;
+  height: auto;
+}
+
+.value-text {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .value-item {
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .value-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+.contact-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Section des coordonnées */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+  width: 50px; /* Ajustez la taille de vos images */
+  height: 50px;
+  margin-right: 15px;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 1.1em;
+  color: #333;
+}
