@@ -61,7 +61,7 @@ export default function HomePage() {
         </div>
         <p className="description">Your Ultimate Platform for Team Sports</p>
         <p className="description additional-text" style={{color: 'white'}}>
-          Linkt is a mobile app that helps team sports enthusiasts easily find partners and book spaces to play. 
+          Linktlikk is a mobile app that helps team sports enthusiasts easily find partners and book spaces to play. 
           It also provides a solution for venue owners to manage and guarantee their reservations.
           So, whether you're a player or a property owner, Linkt is your go-to solution for a seamless sports experience!
         </p>
