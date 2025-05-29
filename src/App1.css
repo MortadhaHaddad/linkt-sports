@@ -1,0 +1,93 @@
+/* Global styles */
+* {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Header Section */
+.header {
+  position: relative;
+  color: rgb(255, 255, 255);
+  background-image: url('./assets/images/plan.PNG');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button {
+  position: absolute;
+  top: 50px;
+  right: 150px;
+}
+
+.contact-btn {
+  background-color: rgba(226, 45, 84, 1);
+  color: white;
+  padding: 13px 40px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: #5CE1E6;
+  color: white;
+  transform: scale(1.05); /* rotation légère + zoom */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-image: url('./assets/images/logo_linkt.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.site-title {
+  font-size: clamp(8rem, 10vw, 14rem);
+  font-weight: 900;
+}
+
+.description {
+  margin-top: 0px;
+  max-width: 600px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+}
+
+.additional-text {
+  margin-top: 40px;
+  max-width: 1000px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+}
+
+/* Top Bars */
+.navbar {
+  width: 100%;
+  height: 35px;
+  background-color: rgba(246, 240, 241, 0.9);
+}

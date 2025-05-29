@@ -1,0 +1,119 @@
+/* Global styles */
+* {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Background section */
+.section-bg {
+  background-color: rgba(143, 210, 221, 0.5);
+}
+
+/* Top Bars */
+.top-bar1 {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(25, 72, 106, 0.9);
+}
+
+.top-bar2 {
+  width: 250px;
+  height: 60px;
+  background-color: rgba(25, 72, 106, 0.9);
+  margin-left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+}
+
+/* Mobile section */
+.App-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0 80px 0;
+}
+
+/* Red box with animation */
+.text-container {
+  background-color: rgba(229, 69, 103, 1);
+  color: white;
+  padding: 40px 60px;
+  max-width: 800px;
+  width: 100%;
+  height: 250px;                /* Hauteur fixe */
+  overflow: hidden;             /* Cache le dépassement */
+  border-radius: 30px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 35px;
+  font-weight: 700;
+  text-align: left;             /* ✅ Texte aligné à gauche */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0 auto;               /* ✅ Centre la div horizontalement */
+  display: flex;
+  align-items: flex-start;      /* Aligne le texte en haut */
+  justify-content: flex-start; /* Commence en haut à gauche */
+  
+}
+
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .text-container {
+    font-size: 28px;
+    padding: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-container {
+    font-size: 24px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container {
+    font-size: 20px;
+    padding: 30px;
+  }
+}
+
+/* Animation fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.navbar {
+  width: 100%;
+  height: 25px;
+  background-color: rgba(246, 240, 241, 0.9);
+}

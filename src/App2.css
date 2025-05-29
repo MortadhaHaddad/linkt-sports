@@ -1,0 +1,93 @@
+/* Global styles */
+* {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Top bar */
+.navbar {
+  width: 100%;
+  height: 35px;
+  background-color: rgba(223, 22, 65, 0.9);
+}
+
+/* Mission Section */
+.mission-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.mission-title {
+  font-size: 35px;
+  font-weight: 700;
+  color: rgba(42, 88, 119, 1);
+  margin-bottom: 80px;
+}
+
+.mission-grid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.mission-item {
+  text-align: left;
+  opacity: 0; /* Hidden by default */
+  transform: translateY(40px);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mission-item.show {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Header styling */
+.mission-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mission-number {
+  font-size: 70px;
+  font-weight: 700;
+  color: rgba(225, 225, 225, 1);
+}
+
+.mission-heading {
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+  max-width: 300px;
+}
+
+.mission-description {
+  color: rgba(0, 0, 0, 1);
+  max-width: 470px;
+  text-align: left;
+  font-weight: 500;
+}

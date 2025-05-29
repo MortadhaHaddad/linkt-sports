@@ -1,0 +1,144 @@
+/* Global styles */
+* {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Cercles avec images */
+.cercle2 {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Nom */
+.sport-title2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+/* Description */
+.sport-description2 {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+/* Conteneur des profils */
+.sports-icons2 {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.App-sport {
+  margin: 100px 0;
+}
+
+.sport2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Animation initiale cachée */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quand visible à l’écran */
+.sport2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Délai d’apparition pour effet "un après l'autre" */
+.sport2:nth-child(1).visible {
+  transition-delay: 0.2s;
+}
+.sport2:nth-child(2).visible {
+  transition-delay: 0.6s;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sports-icons2 {
+    gap: 100px;
+  }
+
+  .cercle2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sport-title2 {
+    font-size: 22px;
+  }
+
+  .sport-description2 {
+    font-size: 16px;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sports-icons2 {
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 20px;
+  }
+
+  .cercle2 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .sport-title2 {
+    font-size: 20px;
+  }
+
+  .sport-description2 {
+    font-size: 14px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sports-icons2 {
+    gap: 30px;
+  }
+
+  .cercle2 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .sport-title2 {
+    font-size: 18px;
+  }
+
+  .sport-description2 {
+    font-size: 12px;
+    max-width: 180px;
+  }
+}
