@@ -36,7 +36,7 @@ export default function HomePage() {
           </div>
           <div className="info-box">
             <img src={email} alt="Email Icon" className="info-icon" />
-            <p>mh.linkt@gmail.com</p>
+            <p>contact@linkt-sports.com</p>
           </div>
         </div>
 

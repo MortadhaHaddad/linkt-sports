@@ -22,11 +22,11 @@ export default function HomePage() {
 
   return (
     <div className="App">
-      <div className="navbar" />
+      <div className="navbar" style={{ backgroundColor: "rgba(217, 217, 217, 0.5)", height: "20px" }}></div>
 
       <div className="section-bg">
-        <div className="top-bar1"/>
-        <div className="top-bar2">
+        <div className="top-bar1" style={{ backgroundColor: 'rgba(25, 72, 106, 0.9)' }}/>
+        <div className="top-bar2" style={{ backgroundColor: 'rgba(25, 72, 106, 0.9)' }}>
           <h2 className="sports-title">Mobile App</h2>
         </div>
 

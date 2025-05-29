@@ -14,7 +14,6 @@ body {
   text-align: center;
 }
 
-
 /* Title */
 .sports-title {
   font-size: 35px;
@@ -25,7 +24,7 @@ body {
 
 /* Values Section */
 .values-container {
-  padding: 60px 20px;
+  padding: 160px 20px;
   background-color: #fff;
 }
 
@@ -62,6 +61,11 @@ body {
   height: 200px;
   object-fit: contain;
   margin-bottom: 15px;
+  transition: transform 0.3s ease; /* Transition fluide sur la transformation */
+}
+
+.value-image:hover {
+  transform: scale(1.1); /* Agrandissement de 10% au survol */
 }
 
 .value-text {

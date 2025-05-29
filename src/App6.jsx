@@ -42,10 +42,8 @@ export default function HomePage() {
 
   return (
     <div className="App">
-      <div className="navbar navbar-transparent" />
-
-      <div className="top-bar1" />
-      <div className="top-bar2">
+      <div className="top-bar1" style={{ backgroundColor: 'rgba(0, 191, 99, 0.9)' }}/>
+      <div className="top-bar2" style={{ backgroundColor: 'rgba(0, 191, 99, 0.9)' }}>
         <h2 className="sports-title">Our Values</h2>
       </div>
 
@@ -63,6 +61,7 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+      <div className="navbar" style={{ backgroundColor: "rgba(217, 217, 217, 0.5)", height: "20px" }}></div>
     </div>
   );
 }

@@ -9,8 +9,8 @@ import starImg from "./assets/images/star.png";
 
 const sportsData = [
   { name: "Football", image: footballImg, color: "rgba(115, 199, 213, 0.8)" },
-  { name: "Basketball", image: basketballImg, color: "rgba(217, 217, 217, 0.8)" },
-  { name: "Tennis", image: tennisImg, color: "rgba(223, 22, 65, 0.8)" },
+  { name: "Tennis", image: basketballImg, color: "rgba(217, 217, 217, 0.8)" },
+  { name: "Padel", image: tennisImg, color: "rgba(223, 22, 65, 0.8)" },
 ];
 
 export default function HomePage() {
@@ -51,8 +51,8 @@ export default function HomePage() {
 
   return (
     <div className="App">
-      <div className="top-bar1"></div>
-      <div className="top-bar2">
+      <div className="top-bar1" style={{ backgroundColor: 'rgba(0, 191, 99, 0.9)' }}></div>
+      <div className="top-bar2" style={{ backgroundColor: 'rgba(0, 191, 99, 0.9)' }}>
         <h2 className="sports-title">Sports</h2>
       </div>
       <div>

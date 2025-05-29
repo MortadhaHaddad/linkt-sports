@@ -57,7 +57,7 @@ export default function HomePage() {
                   }}
                 />
                 <p className="sport-title2">
-                  {index === 0 ? 'Mahdi HADDADD' : 'Mortadha HADDAD'}
+                  {index === 0 ? 'Mahdi HADDAD' : 'Mortadha HADDAD'}
                 </p>
                 <p className="sport-description2">
                   {index === 0

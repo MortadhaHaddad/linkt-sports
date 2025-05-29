@@ -1,24 +1,31 @@
+import { useNavigate } from 'react-router-dom';
 import { Button } from "./Button";
 import "./App1.css";
 import { Typewriter } from "react-simple-typewriter";
 
-export default function HomePage() {
+export default function App1() {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
+
   return (
     <div className="App">
-      {/* Barres de navigation */}
       <div className="navbar" style={{ backgroundColor: "rgba(223, 22, 65, 0.9)" }}></div>
 
-      {/* Section Header */}
       <header className="header">
         <div className="contact-button">
-          <Button className="contact-btn">Contact Us</Button>
+          <Button className="contact-btn" onClick={handleContactClick}>
+            Contact Us
+          </Button>
         </div>
+
         <div className="header-content">
           <div className="logo"></div>
           <h1 className="site-title">Linkt</h1>
         </div>
 
-        {/* Texte avec animation de frappe */}
         <p className="description animated-text">
           <Typewriter
             words={['Your Ultimate Platform for Team Sports']}
@@ -38,7 +45,6 @@ export default function HomePage() {
         </p>
       </header>
 
-      {/* Autres barres */}
       <div className="navbar" style={{ backgroundColor: "#5CE1E6" }}></div>
       <div className="navbar" style={{ backgroundColor: "rgba(217, 217, 217, 0.5)", height: "20px" }}></div>
     </div>
