@@ -18,7 +18,7 @@ body {
 .header {
   position: relative;
   color: rgb(255, 255, 255);
-  background-image: url('./assets/images/plan.PNG');
+  background-image: url('./assets/images/plan100.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
