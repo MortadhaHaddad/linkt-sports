@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Values.css */
 * {
   font-family: 'DM Sans', sans-serif;
   margin: 0;
@@ -42,8 +42,6 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  /* Initial state before animation */
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -61,11 +59,11 @@ body {
   height: 200px;
   object-fit: contain;
   margin-bottom: 15px;
-  transition: transform 0.3s ease; /* Transition fluide sur la transformation */
+  transition: transform 0.3s ease;
 }
 
 .value-image:hover {
-  transform: scale(1.1); /* Agrandissement de 10% au survol */
+  transform: scale(1.1);
 }
 
 .value-text {

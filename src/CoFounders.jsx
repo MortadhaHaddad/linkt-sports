@@ -1,12 +1,13 @@
-import React, { useEffect, useRef } from 'react';
-import "./App5.css";
-import PhotoMahdi from './assets/images/PhotoMahdi.png';
-import PhotoMortadha from './assets/images/PhotoMortadha.jpg';
+import { useEffect, useRef } from 'react';
+import "./CoFounders.css";
+import PhotoMahdi from './assets/images/PhotoMahdi.webp';
+import PhotoMortadha from './assets/images/PhotoMortadha.webp';
 
-export default function HomePage() {
+export default function CoFounders() {
   const sportRefs = useRef([]);
 
   useEffect(() => {
+    const currentRefs = sportRefs.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -20,12 +21,12 @@ export default function HomePage() {
       }
     );
 
-    sportRefs.current.forEach((el) => {
+    currentRefs.forEach((el) => {
       if (el) observer.observe(el);
     });
 
     return () => {
-      sportRefs.current.forEach((el) => {
+      currentRefs.forEach((el) => {
         if (el) observer.unobserve(el);
       });
     };

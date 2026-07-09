@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './App8.css';
+import './Contact.css';
 import planImage from './assets/images/plan100.png';
 
-export default function App8() {
+export default function Contact() {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -50,7 +50,7 @@ export default function App8() {
 
   return (
     <div>
-      <ToastContainer /> {/* Ajoutez ce composant une seule fois dans votre application */}
+      <ToastContainer />
       
       <div className="navbar" style={{ backgroundColor: "rgba(223, 22, 65, 0.9)" }}></div>
 

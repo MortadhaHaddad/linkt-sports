@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import "./App4.css";
+import "./MobileApp.css";
 
-export default function HomePage() {
+export default function MobileApp() {
   const textRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const currentRef = textRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
@@ -14,9 +15,9 @@ export default function HomePage() {
       { threshold: 0.3 }
     );
 
-    if (textRef.current) observer.observe(textRef.current);
+    if (currentRef) observer.observe(currentRef);
     return () => {
-      if (textRef.current) observer.unobserve(textRef.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 

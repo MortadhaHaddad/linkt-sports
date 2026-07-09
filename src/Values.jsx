@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import "./App6.css";
+import { useEffect } from "react";
+import "./Values.css";
 
 import Image1 from './assets/images/plan3.png';
 import Image2 from './assets/images/plan8.png';
@@ -15,26 +15,24 @@ const valuesList = [
   { image: Image5, text: "Partnership for the good" }
 ];
 
-export default function HomePage() {
+export default function Values() {
   useEffect(() => {
     const valueItems = document.querySelectorAll(".value-item");
 
     function handleScroll() {
       valueItems.forEach((item, index) => {
         const rect = item.getBoundingClientRect();
-        // déclenchement quand l'élément est à 100px du bas de la fenêtre
         if (rect.top < window.innerHeight - 100) {
           if (!item.classList.contains("animate")) {
             setTimeout(() => {
               item.classList.add("animate");
-            }, index * 300); // délai 300ms entre chaque
+            }, index * 300);
           }
         }
       });
     }
 
     window.addEventListener("scroll", handleScroll);
-    // Appeler au chargement au cas où certains sont déjà visibles
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);

@@ -2,14 +2,14 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import { AnimatePresence, motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import App from "./App.jsx";
-import App8 from "./App8.jsx";
+import Contact from "./Contact.jsx";
 
 const routesOrder = ["/", "/contact"];
 
 const getDirection = (current, previous) => {
   const currentIndex = routesOrder.indexOf(current);
   const prevIndex = routesOrder.indexOf(previous);
-  return currentIndex >= prevIndex ? 1 : -1; // 1 = forward, -1 = backward
+  return currentIndex >= prevIndex ? 1 : -1;
 };
 
 function AnimatedRoutes() {
@@ -18,7 +18,7 @@ function AnimatedRoutes() {
   const [isFirstRender, setIsFirstRender] = useState(true);
 
   useEffect(() => {
-    if (isFirstRender) setIsFirstRender(false);
+    setIsFirstRender(false);
   }, []);
 
   const direction = getDirection(location.pathname, prevLocation.current);
@@ -53,7 +53,7 @@ function AnimatedRoutes() {
           element={
             <motion.div
               custom={direction}
-              initial={isFirstRender ? false : "initial"} // pas d'animation initiale au premier chargement
+              initial={isFirstRender ? false : "initial"}
               animate="in"
               exit="out"
               variants={variants}
@@ -76,11 +76,10 @@ function AnimatedRoutes() {
               transition={transition}
               style={{ position: "absolute", width: "100%" }}
             >
-              <App8 />
+              <Contact />
             </motion.div>
           }
         />
-
       </Routes>
     </AnimatePresence>
   );

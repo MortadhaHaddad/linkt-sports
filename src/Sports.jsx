@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./App3.css";
+import { useEffect, useRef, useState } from "react";
+import "./Sports.css";
 
 import footballImg from "./assets/images/football.png";
 import basketballImg from "./assets/images/tennis.png";
@@ -13,7 +13,7 @@ const sportsData = [
   { name: "Padel", image: tennisImg, color: "rgba(223, 22, 65, 0.8)" },
 ];
 
-export default function HomePage() {
+export default function Sports() {
   const containerRef = useRef(null);
   const [visibleItems, setVisibleItems] = useState([]);
 
@@ -24,9 +24,7 @@ export default function HomePage() {
       const containerTop = containerRef.current.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
-      // Si container est dans la fenêtre (seuil 100px du bas)
       if (containerTop < windowHeight - 100) {
-        // Affiche les items un par un avec un délai
         sportsData.forEach((_, index) => {
           setTimeout(() => {
             setVisibleItems((prev) => {
@@ -38,13 +36,12 @@ export default function HomePage() {
           }, index * 300);
         });
 
-        // On enlève l'event listener, animation lancée
         window.removeEventListener("scroll", handleScroll);
       }
     }
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Au cas où la section est déjà visible au chargement
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -74,7 +71,7 @@ export default function HomePage() {
             <p className="subtitle additional-text">
               Our primary focus at the moment is mainly on covering three main sports: football,
               tennis, and padel. Our objective for the next two years is to expand into other
-              categories of sports and team games. Stay in touch to see what’s next for Linkt-Sports!
+              categories of sports and team games. Stay in touch to see what&apos;s next for Linkt-Sports!
             </p>
 
             <div className="social-icons">

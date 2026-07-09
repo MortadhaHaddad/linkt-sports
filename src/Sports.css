@@ -1,4 +1,4 @@
-/* Global styles */
+/* Sports.css */
 * {
   font-family: 'DM Sans', sans-serif;
   margin: 0;
@@ -23,7 +23,7 @@ body {
 
 .sports-container {
   padding: 100px 20px ;
-  margin-top: 0px; /* for fixed bars space */
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -58,7 +58,6 @@ body {
   }
 }
 
-/* L’agrandissement au hover sur sport-circle (enfant) */
 .sport-circle {
   width: 220px;
   height: 220px;
@@ -70,7 +69,6 @@ body {
   text-align: center;
   padding: 10px;
   transition: transform 0.3s ease;
-  /* background-color is set inline in React */
 }
 
 .sport-item:hover .sport-circle {

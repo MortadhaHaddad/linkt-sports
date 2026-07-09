@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import "./App7.css";
+import "./Footer.css";
 import backgroundImage from './assets/images/soccer.jpg';
 import logoImage from "./assets/images/logo_linkt.png";
 
-export default function HomePage() {
+export default function Footer() {
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ export default function HomePage() {
       {/* BLUE OVERLAY ON THE WHOLE BOTTOM SECTION BACKGROUND */}
       <div className="blue-overlay">
         
-        {/* FOOTER SOMBRE TRANSPARENT COMME LA PHOTO */}
+        {/* PREMIUM TRANSPARENT FOOTER */}
         <footer className="expensya-footer">
           <div className="footer-header">
             <div className="footer-logo-wrapper">
@@ -64,36 +64,36 @@ export default function HomePage() {
             <div className="footer-column">
               <h4 className="footer-column-title">SOLUTIONS</h4>
               <ul className="footer-links">
-                <li><a href="#mobile-app">Application mobile</a></li>
-                <li><a href="#reservation">Réservation de terrains</a></li>
-                <li><a href="#matchmaking">Matchmaking de joueurs</a></li>
-                <li><a href="#management">Gestion de complexes</a></li>
+                <li><a href="#mobile-app">Mobile App</a></li>
+                <li><a href="#reservation">Venue Booking</a></li>
+                <li><a href="#matchmaking">Player Matchmaking</a></li>
+                <li><a href="#management">Complex Management</a></li>
               </ul>
             </div>
 
-            {/* RESSOURCES */}
+            {/* RESOURCES */}
             <div className="footer-column">
-              <h4 className="footer-column-title">RESSOURCES</h4>
+              <h4 className="footer-column-title">RESOURCES</h4>
               <ul className="footer-links">
                 <li>
                   <a href="#privacy" onClick={openPrivacyModal} className="highlighted-footer-link">
-                    Politique de Confidentialité
+                    Privacy Policy
                   </a>
                 </li>
-                <li><a href="#support">Centre d&apos;aide & Support</a></li>
-                <li><a href="#terms">Conditions d&apos;utilisation</a></li>
-                <li><a href="#blog">Blog & Actualités</a></li>
+                <li><a href="#support">Help Center &amp; Support</a></li>
+                <li><a href="#terms">Terms of Use</a></li>
+                <li><a href="#blog">Blog &amp; News</a></li>
               </ul>
             </div>
 
-            {/* ENTREPRISE */}
+            {/* COMPANY */}
             <div className="footer-column">
-              <h4 className="footer-column-title">ENTREPRISE</h4>
+              <h4 className="footer-column-title">COMPANY</h4>
               <ul className="footer-links">
-                <li><a href="#about">À propos de Linkt</a></li>
-                <li><a href="#cofounders">Co-Fondateurs</a></li>
-                <li><a href="#values">Nos Valeurs</a></li>
-                <li><a href="#careers">Offres d&apos;emploi</a></li>
+                <li><a href="#about">About Linkt</a></li>
+                <li><a href="#cofounders">Co-Founders</a></li>
+                <li><a href="#values">Our Values</a></li>
+                <li><a href="#careers">Careers</a></li>
               </ul>
             </div>
 
@@ -101,18 +101,18 @@ export default function HomePage() {
             <div className="footer-column">
               <h4 className="footer-column-title">CLIENTS</h4>
               <ul className="footer-links">
-                <li><a href="#players">Espace Joueurs</a></li>
-                <li><a href="#owners">Propriétaires de Stades</a></li>
-                <li><a href="#partner-complex">Devenir Partenaire</a></li>
+                <li><a href="#players">Player Space</a></li>
+                <li><a href="#owners">Venue Owners</a></li>
+                <li><a href="#partner-complex">Become a Partner</a></li>
               </ul>
             </div>
 
-            {/* ENTRER EN CONTACT */}
+            {/* GET IN TOUCH */}
             <div className="footer-column contact-col">
-              <h4 className="footer-column-title">ENTRER EN CONTACT</h4>
+              <h4 className="footer-column-title">GET IN TOUCH</h4>
               <div className="footer-contact-details">
-                <p className="contact-office">Bureau Tunisie:</p>
-                <p className="contact-address">14 City Ennour Medenine Nord,<br />Medenine, Tunisie 4100</p>
+                <p className="contact-office">Tunisia Office:</p>
+                <p className="contact-address">14 City Ennour Medenine Nord,<br />Medenine, Tunisia 4100</p>
                 <p className="contact-phone">Tel: +216 26 980 205</p>
                 <p className="contact-email">
                   <a href="mailto:contact@linkt-sports.com">contact@linkt-sports.com</a>
@@ -130,7 +130,7 @@ export default function HomePage() {
                     />
                   </svg>
                   <div className="store-badge-text">
-                    <span className="store-sub">Télécharger dans l&apos;</span>
+                    <span className="store-sub">Download on the</span>
                     <span className="store-main">App Store</span>
                   </div>
                 </a>
@@ -144,7 +144,7 @@ export default function HomePage() {
                     />
                   </svg>
                   <div className="store-badge-text">
-                    <span className="store-sub">DISPONIBLE SUR</span>
+                    <span className="store-sub">GET IT ON</span>
                     <span className="store-main">Google Play</span>
                   </div>
                 </a>
@@ -153,7 +153,7 @@ export default function HomePage() {
           </div>
 
           <div className="footer-bottom">
-            <p>© 2026 Linkt. Made with ❤️ for Sports. Tous droits réservés.</p>
+            <p>© 2026 Linkt. Made with ❤️ for Sports. All rights reserved.</p>
           </div>
         </footer>
       </div>
@@ -162,73 +162,73 @@ export default function HomePage() {
       {isPrivacyOpen && (
         <div className="privacy-modal-overlay" onClick={closePrivacyModal}>
           <div className="privacy-modal-card" onClick={(e) => e.stopPropagation()}>
-            <button className="privacy-modal-close" onClick={closePrivacyModal} aria-label="Fermer">
+            <button className="privacy-modal-close" onClick={closePrivacyModal} aria-label="Close">
               &times;
             </button>
             
             <div className="privacy-modal-header">
               <img src={logoImage} alt="Linkt Sports Logo" className="modal-logo" />
               <div>
-                <h2 className="modal-title">Politique de Confidentialité</h2>
-                <p className="modal-subtitle">Linkt Sports — Dernière mise à jour : 8 juillet 2026</p>
+                <h2 className="modal-title">Privacy Policy</h2>
+                <p className="modal-subtitle">Linkt Sports — Last updated: July 8, 2026</p>
               </div>
             </div>
 
             <div className="privacy-modal-body">
               <p className="modal-intro">
-                L&apos;application <strong>Linkt Sports</strong> est éditée par <strong>Linkt</strong>. La présente politique décrit comment nous collectons, utilisons et protégeons vos données personnelles lorsque vous utilisez notre application mobile.
+                The <strong>Linkt Sports</strong> application is published by <strong>Linkt</strong>. This policy describes how we collect, use, and protect your personal data when you use our mobile application.
               </p>
 
               <hr className="modal-divider" />
 
               <section className="modal-section">
-                <h4>1. Données collectées</h4>
-                <p>Nous collectons les types d&apos;informations suivants pour assurer le bon fonctionnement de nos services :</p>
+                <h4>1. Data Collected</h4>
+                <p>We collect the following types of information to ensure the proper functioning of our services:</p>
                 <ul>
-                  <li><strong>Informations de compte :</strong> Nom, adresse e-mail et numéro de téléphone lors de votre inscription.</li>
-                  <li><strong>Données de localisation :</strong> Si vous l&apos;autorisez, nous collectons vos coordonnées GPS pour vous suggérer des terrains de sport à proximité.</li>
-                  <li><strong>Données financières :</strong> Historique de vos réservations, transactions de recharge de portefeuille et de bonus. Nous ne stockons pas vos coordonnées de carte bancaire directement.</li>
+                  <li><strong>Account information:</strong> Name, email address, and phone number when you register.</li>
+                  <li><strong>Location data:</strong> If you authorize it, we collect your GPS coordinates to suggest nearby sports venues.</li>
+                  <li><strong>Financial data:</strong> History of your bookings, wallet recharge transactions, and bonuses. We do not store your credit card details directly.</li>
                 </ul>
               </section>
 
               <section className="modal-section">
-                <h4>2. Utilisation des données</h4>
-                <p>Vos données sont utilisées uniquement pour :</p>
+                <h4>2. Use of Data</h4>
+                <p>Your data is used solely to:</p>
                 <ul>
-                  <li>Gérer et valider vos réservations de terrains de sport.</li>
-                  <li>Faciliter la mise en relation avec d&apos;autres joueurs (matchmaking).</li>
-                  <li>Afficher les terrains les plus proches grâce à la géolocalisation.</li>
-                  <li>Assurer la sécurité de votre compte via l&apos;authentification OTP.</li>
+                  <li>Manage and validate your sports venue bookings.</li>
+                  <li>Facilitate matchmaking with other players.</li>
+                  <li>Display the nearest sports venues using geolocation.</li>
+                  <li>Secure your account via OTP authentication.</li>
                 </ul>
               </section>
 
               <section className="modal-section">
-                <h4>3. Partage des données</h4>
-                <p>Nous ne vendons ni ne partageons vos données à des tiers publicitaires. Les seules données partagées sont :</p>
+                <h4>3. Sharing of Data</h4>
+                <p>We do not sell or share your data with advertising third parties. The only shared data is:</p>
                 <ul>
-                  <li>Avec les propriétaires de complexes sportifs (stades) pour valider vos réservations (nom et code de réservation uniquement).</li>
-                  <li>Avec les autorités compétentes si la loi l&apos;exige.</li>
+                  <li>With sports complex owners (stadiums) to validate your bookings (name and booking code only).</li>
+                  <li>With competent authorities if required by law.</li>
                 </ul>
               </section>
 
               <section className="modal-section">
-                <h4>4. Droits des utilisateurs (Suppression des données)</h4>
-                <p>Conformément à la réglementation sur la protection des données, vous pouvez à tout moment demander la modification ou la suppression complète de votre compte et de vos données personnelles.</p>
+                <h4>4. User Rights (Data Deletion)</h4>
+                <p>In accordance with data protection regulations, you can request the modification or complete deletion of your account and personal data at any time.</p>
                 <div className="modal-callout">
-                  Pour exercer ce droit, vous pouvez nous contacter directement à l&apos;adresse e-mail de support : 
+                  To exercise this right, you can contact us directly at our support email address: 
                   <a href="mailto:linkt.sports.app@gmail.com" className="modal-email-link">linkt.sports.app@gmail.com</a>
                 </div>
               </section>
 
               <section className="modal-section">
-                <h4>5. Securité</h4>
-                <p>Toutes les données de l&apos;application sont transmises via des connexions sécurisées cryptées (HTTPS) vers nos serveurs afin de garantir leur protection contre tout accès non autorisé.</p>
+                <h4>5. Security</h4>
+                <p>All application data is transmitted via secure encrypted connections (HTTPS) to our servers to ensure protection against unauthorized access.</p>
               </section>
             </div>
 
             <div className="privacy-modal-footer">
               <button className="modal-close-btn" onClick={closePrivacyModal}>
-                Fermer
+                Close
               </button>
             </div>
           </div>

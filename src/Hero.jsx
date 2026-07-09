@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from "./Button";
-import "./App1.css";
+import "./Hero.css";
 import { Typewriter } from "react-simple-typewriter";
 
-export default function App1() {
+export default function Hero() {
   const navigate = useNavigate();
 
   const handleContactClick = () => {
@@ -26,7 +26,7 @@ export default function App1() {
           <h1 className="site-title">Linkt</h1>
         </div>
 
-        <p className="description animated-text">
+        <div className="description animated-text">
           <Typewriter
             words={['Your Ultimate Platform for Team Sports']}
             loop={1}
@@ -36,12 +36,12 @@ export default function App1() {
             deleteSpeed={0}
             delaySpeed={1000}
           />
-        </p>
+        </div>
 
         <p className="description additional-text" style={{ color: 'white' }}>
           Linkt is a mobile app that helps team sports enthusiasts easily find partners and book spaces to play.
           It also provides a solution for venue owners to manage and guarantee their reservations.
-          So, whether you're a player or a property owner, Linkt is your go-to solution for a seamless sports experience!
+          So, whether you&apos;re a player or a property owner, Linkt is your go-to solution for a seamless sports experience!
         </p>
       </header>
 

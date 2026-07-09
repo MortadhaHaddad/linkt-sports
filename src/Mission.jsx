@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import "./App2.css";
+import { useEffect, useRef } from "react";
+import "./Mission.css";
 
-export default function HomePage() {
+export default function Mission() {
   const itemsRef = useRef([]);
 
   useEffect(() => {
