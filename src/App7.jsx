@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App7.css";
 import backgroundImage from './assets/images/soccer.jpg';
 import logoImage from "./assets/images/logo_linkt.png";
@@ -6,13 +6,35 @@ import logoImage from "./assets/images/logo_linkt.png";
 export default function HomePage() {
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
+  useEffect(() => {
+    const checkUrlForPrivacy = () => {
+      if (
+        window.location.hash === "#privacy" ||
+        window.location.search.includes("privacy=true")
+      ) {
+        setIsPrivacyOpen(true);
+      }
+    };
+
+    // Check on mount
+    checkUrlForPrivacy();
+
+    // Listen to hash changes
+    window.addEventListener("hashchange", checkUrlForPrivacy);
+    return () => window.removeEventListener("hashchange", checkUrlForPrivacy);
+  }, []);
+
   const openPrivacyModal = (e) => {
     e.preventDefault();
     setIsPrivacyOpen(true);
+    window.location.hash = "privacy";
   };
 
   const closePrivacyModal = () => {
     setIsPrivacyOpen(false);
+    if (window.location.hash === "#privacy") {
+      window.history.replaceState(null, null, window.location.pathname);
+    }
   };
 
   return (
