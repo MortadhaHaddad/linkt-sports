@@ -80,6 +80,7 @@ function AnimatedRoutes() {
             </motion.div>
           }
         />
+
       </Routes>
     </AnimatePresence>
   );
